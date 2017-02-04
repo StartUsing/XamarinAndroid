@@ -2,13 +2,12 @@
 ## Describe
 
 ### Have function
-
-Root 
-WifiControl
-WifiApControl
-WifiApConnectionList
-FlightModeControl
-MobileDataControl
+> - Root 
+> - WifiControl
+> - WifiApControl
+> - WifiApConnectionList
+> - FlightModeControl
+> - MobileDataControl
 
 ### Version
 android : 4.4+ or api 4.4+
