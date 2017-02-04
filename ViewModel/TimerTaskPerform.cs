@@ -32,13 +32,11 @@ namespace App1
         {
             _pingTmr.Dispose();
         }
-
-        //任务委托
+        
         public delegate void TimerTaskEventHandler(object state);
 
         public delegate void TimerTaskEndEventhandler();
 
-        //Ping委托
         public delegate void TimerPingTaskEventHandler(object state);
     }
 }
