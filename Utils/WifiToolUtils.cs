@@ -12,9 +12,6 @@ namespace App1
 {
     public class WifiToolUtils
     {
-        /// <summary>
-        ///  获得WIFI热点状态
-        /// </summary>
         public static WifiApState GetWifiApState(Context context)
         {
             var wifiManager = (WifiManager)context.GetSystemService(Context.WifiService);
@@ -23,10 +20,6 @@ namespace App1
             return (WifiApState)i;
         }
 
-        /// <summary>
-        /// 设置WiFi热点状态
-        /// 如果没有设置那么按默认走
-        /// </summary>
         public static bool SetWifiApEnabled(Context context, bool enabled, WifiapViewModel model)
         {
             var wifiManager = (WifiManager)context.GetSystemService(Context.WifiService);
@@ -52,27 +45,18 @@ namespace App1
             return (bool)enableWifi.Invoke(wifiManager, myConfig, enabled);
         }
 
-        /// <summary>
-        /// 设置WiFi
-        /// </summary>
         public static bool SetWifiEnabled(Context context, bool enabled)
         {
             var wifiManager = (WifiManager)context.GetSystemService(Context.WifiService);
             return wifiManager.SetWifiEnabled(enabled);
         }
 
-        /// <summary>
-        /// 获得Wifi状态
-        /// </summary>
         public static WifiState GetWifiState(Context context)
         {
             var wifiManager = (WifiManager)context.GetSystemService(Context.WifiService);
             return wifiManager.WifiState;
         }
 
-        /// <summary>
-        /// 设置数据流量
-        /// </summary>
         public static void SetMobileData(Context context, bool enabled)
         {
             var mobileDataManager = (ConnectivityManager)context.GetSystemService(Context.ConnectivityService);
@@ -83,9 +67,6 @@ namespace App1
             method.Invoke(mobileDataManager, enabled);
         }
 
-        /// <summary>
-        /// 获取链接到当前热点的设备IP：
-        /// </summary>
         public static List<WifiApStateViewModel> GetConnectedHotIp()
         {
             var result = new List<WifiApStateViewModel>();
