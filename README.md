@@ -13,6 +13,7 @@ android : 4.4+ or api 4.4+
 
 Because working relationship only provide tools do not provide the logic and UI
 
+### Other
 ```
 //It can be real-time detection
 var es = Executors.NewCachedThreadPool();
